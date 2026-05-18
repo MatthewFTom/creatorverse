@@ -1,0 +1,136 @@
+:root {
+  --pico-font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);
+}
+
+main.container {
+  max-width: 1100px;
+  padding-block: 2rem;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0.25rem;
+}
+
+.creator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.creator-card {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: var(--pico-border-radius);
+  background: var(--pico-card-background-color);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.creator-card__image,
+.creator-detail__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.creator-card__placeholder,
+.creator-detail__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+}
+
+.creator-card header,
+.creator-card p {
+  padding-inline: 1rem;
+}
+
+.creator-card header {
+  padding-top: 0.75rem;
+}
+
+.creator-card__description {
+  color: var(--pico-muted-color);
+  font-size: 0.9rem;
+  min-height: 3.5rem;
+}
+
+.creator-card__url {
+  padding: 0 1rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.creator-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem 1rem;
+  margin: 0;
+}
+
+.creator-card__actions a,
+.creator-card__actions button {
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.breadcrumb {
+  margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.creator-detail {
+  max-width: 640px;
+}
+
+.creator-detail__placeholder {
+  border-radius: var(--pico-border-radius);
+  margin-bottom: 1rem;
+  min-height: 200px;
+}
+
+.creator-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.error {
+  color: var(--pico-del-color);
+  background: color-mix(in srgb, var(--pico-del-color) 15%, transparent);
+  padding: 0.75rem 1rem;
+  border-radius: var(--pico-border-radius);
+}
