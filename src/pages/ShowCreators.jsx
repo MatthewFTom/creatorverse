@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { supabase } from '../client'
 import CreatorCard from '../components/CreatorCard'
+import PageHeader from '../components/PageHeader'
 
 function ShowCreators() {
   const [creators, setCreators] = useState([])
@@ -47,15 +48,14 @@ function ShowCreators() {
 
   return (
     <section>
-      <header className="page-header">
-        <div>
-          <h1>Creatorverse</h1>
-          <p>Discover and manage your favorite content creators.</p>
-        </div>
+      <PageHeader showTagline>
         <Link to="/new" role="button">
           Add Creator
         </Link>
-      </header>
+        <Link to="/credits" role="button" className="outline">
+          Credits
+        </Link>
+      </PageHeader>
 
       {loading && <p aria-busy="true">Loading creators…</p>}
       {error && <p className="error">{error}</p>}
